@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arithmetic Calculator</title>
+  <style>
+    body{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .calculator {
+      width: 300px;
+      padding: 10px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+    }
+
+    .calculator input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .calculator button {
+      width: 30%;
+      padding: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .calculator button.operator {
+      background-color:#303841;
+      color:#eeeeee;
+    }
+
+    .calculator button.clear {
+      background-color:#303841;
+      color:#eeeeee;
+    }
+    .wholecalc{
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #303841;
+        height: 500px;
+        width: 500px;
+        border-radius: 20px;
+    }
+   .calculator{
+        width:300px;
+    }
+  </style>
+</head>
+<body id="body">
+    <div class="wholecalc">
+        <div class="calculator">
+            <input type="text" id="result" readonly>
+          
+            <button onclick="appendValue('/')" class="operator">/</button>
+            <button onclick="appendValue('+')" class="operator">+</button>
+            <button onclick="appendValue('-')" class="operator">-</button>
+            <button onclick="appendValue('*')" class="operator">*</button>
+            <button onclick="cl()" class="clear">Clear</button>
+            <button onclick="cal()" class="operator">=</button>
+            <button onclick="max()" class="operator">max</button>
+        
+            <button onclick="appendValue(1)">1</button>
+            <button onclick="appendValue(2)">2</button>
+            <button onclick="appendValue(3)">3</button>
+            
+            <button onclick="appendValue(4)">4</button>
+            <button onclick="appendValue(5)">5</button>
+            <button onclick="appendValue(6)">6</button>
+            
+            <button onclick="appendValue(7)">7</button>
+            <button onclick="appendValue(8)">8</button>
+            <button onclick="appendValue(9)">9</button>
+            
+            <button onclick="appendValue(0)">0</button>
+            <button onclick="appendValue('.')">.</button>
+          </div>
+
+    </div>
+ 
+
+  <script>
+
+function  appendValue(value)
+{
+document.querySelector("#result").value+=value;
+}
+function cal()
+{
+  const ex=document.querySelector("#result").value;
+const val=eval(ex);
+  document.getElementById("result").value=val;
+}
+function cl()
+{
+document.getElementById("result").style.backgroundColor='red';
+document.querySelector("#body").style.backgroundColor="yellow";
+document.querySelector(".wholecalc").style.height="0px"
+
+  
+}
+function max()
+{
+
+document.querySelector(".wholecalc").style.height="500px"
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // function clearInput() {
+    //   document.getElementById('result').value = '';
+    // }
+    // function appendValue(value) {
+    //   document.getElementById('result').value += value;
+    // }
+    // function calculate() {
+    //   const expression = document.getElementById('result').value;
+    
+    //   document.getElementById('result').value=eval(expression);
+    // }
+  </script>
+</body>
+</html>
+<!-- name:Abenezer Terefe Id 1304076 -->
